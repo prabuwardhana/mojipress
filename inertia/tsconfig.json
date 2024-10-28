@@ -4,9 +4,10 @@
     "baseUrl": ".",
     "module": "ESNext",
     "jsx": "react-jsx",
+    "types": ["vite/client"],
     "paths": {
       "~/*": ["./*"],
     },
   },
-  "include": ["./**/*.ts", "./**/*.tsx"],
+  "include": ["./**/*.ts", "./**/*.tsx", "hooks/hooks"],
 }
