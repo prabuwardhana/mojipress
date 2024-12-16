@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-const FrontpageLayout = ({ children }: { children: ReactNode }) => {
+const SiteLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <div className="flex flex-col justify-center items-center h-screen w-full">{children}</div>
@@ -8,4 +8,4 @@ const FrontpageLayout = ({ children }: { children: ReactNode }) => {
   )
 }
 
-export default FrontpageLayout
+export default SiteLayout

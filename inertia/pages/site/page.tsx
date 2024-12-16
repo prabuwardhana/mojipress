@@ -1,14 +1,14 @@
 import { Head } from '@inertiajs/react'
-import FrontpageLayout from '~/layout/frontpage'
+import SiteLayout from '~/layout/site'
 
 const SitePage = (props: { slug: string; pathname: string }) => {
   return (
     <>
       <Head title={props.slug} />
-      <FrontpageLayout>
+      <SiteLayout>
         <h2 className="xt-2xl">Site Page for slug: {props.slug}</h2>
         <p>{props.pathname}</p>
-      </FrontpageLayout>
+      </SiteLayout>
     </>
   )
 }
