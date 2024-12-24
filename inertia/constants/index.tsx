@@ -20,58 +20,57 @@ export type SideNavItem = {
 export const SIDENAV_ITEMS = [
   {
     title: 'Home',
-    path: '/',
+    path: '/admin',
     icon: Home,
   },
   {
     title: 'Posts',
-    path: 'posts',
+    path: '/admin/posts',
     icon: LetterText,
     submenu: true,
     subMenuItems: [
-      { title: 'All Post', path: 'posts' },
-      { title: 'Add New Post', path: 'posts/create' },
+      { title: 'All Post', path: '/admin/posts' },
+      { title: 'Add New Post', path: '/admin/posts/create' },
     ],
   },
   {
     title: 'Categories',
-    path: 'categories',
+    path: '/admin/categories',
     icon: Shapes,
     submenu: true,
     subMenuItems: [
-      { title: 'All Categories', path: 'categories' },
-      { title: 'Add New Category', path: 'categories/create' },
+      { title: 'All Categories', path: '/admin/categories' },
+      { title: 'Add New Category', path: '/admin/categories/create' },
     ],
   },
   {
     title: 'Pages',
-    path: 'pages',
+    path: '/admin/pages',
     icon: NotebookText,
     submenu: true,
     subMenuItems: [
-      { title: 'All Pages', path: 'pages' },
-      { title: 'Add New Page', path: 'pages/create' },
+      { title: 'All Pages', path: '/admin/pages' },
+      { title: 'Add New Page', path: '/admin/pages/create' },
     ],
   },
   {
     title: 'Users',
-    path: 'users',
+    path: '/admin/users',
     icon: Users,
     submenu: true,
     subMenuItems: [
-      { title: 'All Users', path: 'users' },
-      { title: 'Add New User', path: 'users/create' },
-      { title: 'Profile', path: 'users/profile' },
+      { title: 'All Users', path: '/admin/users' },
+      { title: 'Add New User', path: '/admin/users/create' },
     ],
   },
   {
     title: 'Settings',
-    path: 'settings',
+    path: '/admin/settings',
     icon: Settings,
   },
   {
     title: 'Help',
-    path: 'help',
+    path: '/admin/help',
     icon: HelpCircle,
   },
 ]
