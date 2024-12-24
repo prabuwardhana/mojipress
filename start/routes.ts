@@ -10,7 +10,14 @@
 const HomeController = () => import('#controllers/home_controller')
 const PagesController = () => import('#controllers/pages_controller')
 const PostsController = () => import('#controllers/posts_controller')
+const AdminHomeController = () => import('#controllers/admin/home_controller')
 import router from '@adonisjs/core/services/router'
+
+router
+  .group(() => {
+    router.get('/', [AdminHomeController, 'index'])
+  })
+  .prefix('/admin')
 
 router
   .group(() => {
