@@ -20,6 +20,10 @@ const inertiaConfig = defineConfig({
   ssr: {
     enabled: true,
     entrypoint: 'inertia/app/ssr.tsx',
+    pages: (_, page) => {
+      const ssrPages = page.startsWith('site')
+      return ssrPages
+    },
   },
 })
 
