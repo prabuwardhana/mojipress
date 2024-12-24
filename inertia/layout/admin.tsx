@@ -3,8 +3,8 @@ import { motion, useAnimationControls } from 'framer-motion'
 
 import { useMediaQuery } from '@uidotdev/usehooks'
 
-import { Sidebar } from '~/components/layout/sidebar'
-import { Header } from '~/components/layout/header'
+import { Sidebar } from '~/components/admin/layout/sidebar'
+import { Header } from '~/components/admin/layout/header'
 
 import { cn } from '~/lib/utils'
 import { Toaster } from '~/components/ui/toaster'

@@ -6,7 +6,7 @@ import { Rocket } from 'lucide-react'
 import { SIDENAV_ITEMS } from '~/constants'
 import { cn } from '~/lib/utils'
 
-import NavItem from '~/components/layout/nav_item'
+import NavItem from '~/components/admin/layout/nav_item'
 
 interface SidebarProps {
   collapsed: boolean
