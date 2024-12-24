@@ -3,6 +3,7 @@ import { cn } from '~/lib/utils'
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar'
 
 import { Dispatch, SetStateAction } from 'react'
+import { ModeToggle } from '~/components/admin/common/mode_toggle'
 
 interface HeaderProps {
   collapsed: boolean
@@ -18,6 +19,7 @@ export const Header = ({ collapsed, setCollapsed }: HeaderProps) => {
         </button>
       </div>
       <div className="flex items-center gap-x-3">
+        <ModeToggle />
         <button className="btn-ghost size-10">
           <Bell size={18} />
         </button>
