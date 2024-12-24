@@ -1,7 +1,8 @@
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 import { motion, useAnimationControls } from 'framer-motion'
 
 import { useMediaQuery } from '@uidotdev/usehooks'
+import { useClickOutside } from '~/hooks/use_click_outside'
 
 import { Sidebar } from '~/components/admin/layout/sidebar'
 import { Header } from '~/components/admin/layout/header'
@@ -13,7 +14,7 @@ const AdminLayout = ({ children }: { children: ReactNode }) => {
   const isDesktopDevice = useMediaQuery('(min-width: 768px)')
   const [collapsed, setCollapsed] = useState(!isDesktopDevice)
 
-  /** TODO: Add functionality to close the sidebar when it's clicked outside */
+  const sidebarRef = useRef<HTMLElement>(null)
 
   const containerVariants = {
     close: {
@@ -47,6 +48,12 @@ const AdminLayout = ({ children }: { children: ReactNode }) => {
       containerControls.start('close')
     }
   }, [isDesktopDevice, collapsed, containerControls])
+
+  useClickOutside([sidebarRef], () => {
+    if (!isDesktopDevice && !collapsed) {
+      setCollapsed(true)
+    }
+  })
 
   return (
     <div className="min-h-screen bg-secondary">
