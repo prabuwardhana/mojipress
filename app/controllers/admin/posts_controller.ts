@@ -11,7 +11,9 @@ export default class PostsController {
   /**
    * Display form to create a new record
    */
-  async create({}: HttpContext) {}
+  async create({ inertia }: HttpContext) {
+    return inertia.render('admin/posts/create_or_edit')
+  }
 
   /**
    * Handle form submission for the create action
@@ -26,7 +28,9 @@ export default class PostsController {
   /**
    * Edit individual record
    */
-  async edit({ params }: HttpContext) {}
+  async edit({ params, inertia }: HttpContext) {
+    return inertia.render('dashboard/posts/create_or_edit', { id: params.id })
+  }
 
   /**
    * Handle form submission for the edit action
