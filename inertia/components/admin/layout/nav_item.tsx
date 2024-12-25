@@ -139,10 +139,7 @@ const NavItem = ({ item, isCollapsed }: NavItemProps) => {
                     <Link
                       key={idx}
                       href={subItem.path}
-                      className={cn(
-                        'sidebar-item',
-                        url.replace('/', '') === subItem.path ? 'active' : ''
-                      )}
+                      className={cn('sidebar-item', url === subItem.path ? 'active' : '')}
                     >
                       {!isCollapsed && <span className="whitespace-nowrap">{subItem.title}</span>}
                     </Link>
