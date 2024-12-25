@@ -29,7 +29,7 @@ export default class PostsController {
    * Edit individual record
    */
   async edit({ params, inertia }: HttpContext) {
-    return inertia.render('dashboard/posts/create_or_edit', { id: params.id })
+    return inertia.render('admin/posts/create_or_edit', { id: params.id })
   }
 
   /**
