@@ -13,6 +13,7 @@ const PostsController = () => import('#controllers/posts_controller')
 const AdminHomeController = () => import('#controllers/admin/home_controller')
 const AdminPostsController = () => import('#controllers/admin/posts_controller')
 const AdminCategoriesController = () => import('#controllers/admin/categories_controller')
+const AdminPagesController = () => import('#controllers/admin/pages_controller')
 import router from '@adonisjs/core/services/router'
 
 router
@@ -20,6 +21,7 @@ router
     router.get('/', [AdminHomeController, 'index'])
     router.resource('posts', AdminPostsController)
     router.resource('categories', AdminCategoriesController)
+    router.resource('pages', AdminPagesController)
   })
   .prefix('/admin')
 
